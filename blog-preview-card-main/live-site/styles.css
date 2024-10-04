@@ -23,6 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    max-width: 600px;
     width: 28%;
 }
 
@@ -70,6 +71,10 @@ body {
     margin: 16px 0px;
 }
 
+.titulo:hover, .titulo:active, .titulo:focus {
+    color: hsl(47, 88%, 63%);
+}
+
 .contenido {
     line-height: 1.6;
     margin-bottom: 15px;
@@ -91,7 +96,6 @@ body {
 }
 
 .autor img {
-    /* width: 40px; */
     height: 2.2rem;
     object-fit: cover;
 }
@@ -107,12 +111,18 @@ body {
   text-decoration: none;
 }
 
-
+/* Estilos para celulares grandes */
 @media only screen and (max-width: 768px) {
-    * {
-        font-size: 0.8rem;
-    }
     .contenedor {
-        width: 80%;
+        max-width: 400px;
+        width: 85%;
+    }
+}
+
+/* Estilos para tablets */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .contenedor {
+        max-width: 400px;
+        width: 40%;
     }
 }
